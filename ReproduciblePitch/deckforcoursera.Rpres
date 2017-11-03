@@ -1,0 +1,63 @@
+2017 Halloween Shiny Project of Coursera
+========================================================
+author: Mike Rucker, Ph.D
+date: 10/31/2017 (Halloween)
+autosize: true
+
+Project Introductioin
+========================================================
+
+<br /><font size = "36px">This Shiny project was a fun take on a timely topic - kids
+and candy on Halloween. It informs the user about a strategy
+to help limit a kid's candy intake, while providing them
+a budget calculator for the intervention's protocol.<br /><br /> 
+
+The slides to follow provide the code for my Shiny project.</font>
+
+
+ui.R code
+========================================================
+
+```{r, echo = TRUE}
+library(shiny)
+
+shinyUI(fluidPage(
+  titlePanel("Halloween Candy Tip for Healthy Teeth"),
+  sidebarLayout(
+    sidebarPanel(
+      h4("Sort and Eliminate Strategy"),
+      h5("After a long night of trick-or-treating..."),
+      h6("Potential budget in dollars ($):"),
+      textOutput("text")
+    ),
+    mainPanel(
+      h1("Please indicate you child's candy count and the price you are willing to pay per piece:"),
+      sliderInput("candy", "Pieces of candy:", 1, 300, 1),
+      sliderInput("cost", "Cost per piece of candy:", .01, .05, .01, .01)
+    )
+  )
+))
+```
+
+
+server.R
+========================================================
+```{r, echo = TRUE}
+library(shiny)
+shinyServer(function(input, output) {
+  output$text <- renderText(input$candy * input$cost)
+})
+```
+
+
+Acknowledgments
+========================================================
+
+I would like to acknowledge my Verywell.com colleague 
+Shawn Watson: https://www.verywell.com/shawn-watson-1058877
+
+The inspiration for the assignment can be found here: https://godleystationdental.com/top-halloween-candy-tips-for-healthy-teeth
+
+Shiny URL: https://mikerucker.shinyapps.io/2017_halloween_shiny_project_of_coursera
+
+Github Repo: https://github.com/MikeRucker/ShinyAndRpresAssignmentCoursera
