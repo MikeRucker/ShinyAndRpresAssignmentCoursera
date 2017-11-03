@@ -7,12 +7,11 @@ autosize: true
 Project Introductioin
 ========================================================
 
-<br /><font size = "36px">This Shiny project was a fun take on a timely topic - kids
+This Shiny project was a fun take on a timely topic - kids
 and candy on Halloween. It informs the user about a strategy
 to help limit a kid's candy intake, while providing them
-a budget calculator for the intervention's protocol.<br /><br /> 
-
-The slides to follow provide the code for my Shiny project.</font>
+a budget calculator for the intervention's protocol. The 
+slides to follow provide the code for my Shiny project.
 
 
 ui.R code
@@ -60,4 +59,6 @@ The inspiration for the assignment can be found here: https://godleystationdenta
 
 Shiny URL: https://mikerucker.shinyapps.io/2017_halloween_shiny_project_of_coursera
 
-Github Repo: https://github.com/MikeRucker/ShinyAndRpresAssignmentCoursera
+GitHub Repo: https://github.com/MikeRucker/ShinyAndRpresAssignmentCoursera
+
+RPubs link: http://rpubs.com/MikeRuckerPhD/ShinyHalloweenAppForCoursera
